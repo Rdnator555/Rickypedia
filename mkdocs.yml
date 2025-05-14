@@ -3,6 +3,7 @@ theme:
   font:
     text: Merriweather Sans
   name: material
+  custom_dir: overrides
   features:
     - navigation.tabs
     - navigation.sections
@@ -12,7 +13,6 @@ theme:
     - navigation.indexes
     - navigation.top
     - toc.follow
-
   palette:
     # Dark Mode
     - scheme: slate
