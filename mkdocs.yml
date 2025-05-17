@@ -2,6 +2,7 @@ site_name: IndieLibrary
 theme:
   font:
     text: Merriweather Sans
+  logo: img.favicon.ico
   name: material
   custom_dir: overrides
   features:
@@ -12,6 +13,9 @@ theme:
     - navigation.path
     - navigation.indexes
     - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
     - toc.follow
   palette:
     # Dark Mode
