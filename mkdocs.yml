@@ -2,7 +2,8 @@ site_name: IndieLibrary
 theme:
   font:
     text: Merriweather Sans
-  logo: img.favicon.ico
+  logo: img/favicon.ico
+  favicon: img/favicon.ico
   name: material
   custom_dir: overrides
   features:
