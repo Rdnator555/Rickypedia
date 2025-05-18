@@ -4,11 +4,11 @@ nav:
     - Menu Reimagined: MenuReimagined/index.md
     - Characters Menu: MenuReimagined/Characters Menu.md
   - Yggdrasil: Yggdrasil
-  - More Resources: util
+  - More Resources: Util
   #  - "*"
   - Extras:
-    - Blog: blog/index.md
-    - Posts: blog/posts
+    - Blog: Blog/index.md
+    - Posts: Blog/posts
     
 not_in_nav:
 flatten_single_child_sections: true

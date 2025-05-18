@@ -10,10 +10,12 @@ markdown_extensions:
 plugins:
    - search
    - awesome-nav
-site_name: IndieLibrary
+site_name: Rickypedia
+site_url: https://rdnator555.github.io/Rickypedia
 theme:
   font:
     text: Merriweather Sans
+  logo: img/favicon.ico
   favicon: img/favicon.ico
   name: material
   custom_dir: overrides
@@ -28,6 +30,7 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    - navigation.instant
     #- toc.follow
     #- content.code.copy
   palette:

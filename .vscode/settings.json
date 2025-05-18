@@ -4,10 +4,16 @@
         "https://json.schemastore.org/mkdocs-1.6.json": "file:///c%3A/Users/Rdnat/Documents/GitHub/Rickypedia/mkdocs.yml"
     },
     "cSpell.ignoreWords": [
-        "awesome-nav"
+        "awesome-nav",
+        "favicon",
+        "ico",
+        "img"
     ],
     "cSpell.words": [
         "awesome-nav",
+        "favicon",
+        "ico",
+        "img",
         "Reimagined"
     ]
 }
