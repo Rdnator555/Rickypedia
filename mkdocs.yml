@@ -7,6 +7,16 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.smartsymbols
   - markdown.extensions.admonition
+  - toc:
+      permalink: "\u2693\uFE0E"
+      title: On this page
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 plugins:
    - search
    - awesome-nav
@@ -21,18 +31,18 @@ theme:
   custom_dir: overrides
   features:
     - navigation.tabs
-    #- navigation.sections
-    #- navigation.tracking
-    #- navigation.expand
-    #- navigation.path
-    #- navigation.indexes
+    - navigation.sections
+    - navigation.tracking
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
     - navigation.top
     - search.suggest
     - search.highlight
     - search.share
     - navigation.instant
-    #- toc.follow
-    #- content.code.copy
+    - toc.follow
+    - content.code.copy
   palette:
     # Dark Mode
     - scheme: slate
