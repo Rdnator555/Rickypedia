@@ -1,0 +1,5 @@
+nav:
+  - Menu Reimagined: MenuReimagined/index.md
+  - Characters Menu: MenuReimagined/Characters Menu.md
+
+flatten_single_child_sections: true

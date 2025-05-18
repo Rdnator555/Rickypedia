@@ -1,13 +1,11 @@
 nav:
   - Home: index.md
-  - Menu Reimagined: 
-    - Menu Reimagined: MenuReimagined/index.md
-    - Characters Menu: MenuReimagined/Characters Menu.md
+  - Menu Reimagined: MenuReimagined
   - Yggdrasil: Yggdrasil
   - More Resources: Util
   #  - "*"
   - Extras:
-    - Blog: Blog
+    - Blog: Blog/index.md
     - Posts: Blog/posts
     
 not_in_nav:

@@ -1,0 +1,4 @@
+nav:
+  - Extras: index.md
+
+flatten_single_child_sections: true
