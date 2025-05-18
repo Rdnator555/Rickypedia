@@ -7,7 +7,7 @@ nav:
   - More Resources: Util
   #  - "*"
   - Extras:
-    - Blog: Blog/index.md
+    - Blog: Blog
     - Posts: Blog/posts
     
 not_in_nav:
