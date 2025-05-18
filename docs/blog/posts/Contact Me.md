@@ -1,1 +1,0 @@
-Suggestions, bug reports and compatibility issues can be both reported through [Discord](https://discord.com/invite/nnsXKWbRnh) or through [Github](https://github.com/Rdnator555/Rickypedia/issues) normally 
