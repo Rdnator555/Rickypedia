@@ -1,5 +1,13 @@
 {
     "yaml.schemas": {
+        "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml",
         "https://json.schemastore.org/mkdocs-1.6.json": "file:///c%3A/Users/Rdnat/Documents/GitHub/Rickypedia/mkdocs.yml"
-    }
+    },
+    "cSpell.ignoreWords": [
+        "awesome-nav"
+    ],
+    "cSpell.words": [
+        "awesome-nav",
+        "Reimagined"
+    ]
 }

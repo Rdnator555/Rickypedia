@@ -1,13 +1,13 @@
 # Welcome to Rickypedia
 
-Full documentation for any modding resource I made.
-
-## Content
-    Menu Reimagined 
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Full documentation for any modding resource I made and games/proyects.  
+&nbsp;  
+### Content
+- [Menu Reimagined](MenuReimagined)  
+    Api that reimplements the vanilla menu, allowing more customization options such as modded character variants, animated portraits and events/character tokens.  
+- [Yggdrasil](Yggdrasil)  
+    In game custom mod menu. Aims to implement story, ability to create events and share runs(seed + character? + modlist?) and more.
+    At the moment, only the Modloader has been implemented
+- [Helper/Utility](Util)
+    Helper file of my mods, here I'll explain what they do and how i implement them.
+- [Extras](Extras)

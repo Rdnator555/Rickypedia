@@ -1,23 +1,35 @@
+
+not_in_nav:  |
+markdown_extensions:
+  - pymdownx.betterem
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.smartsymbols
+  - markdown.extensions.admonition
+plugins:
+   - search
+   - awesome-nav
 site_name: IndieLibrary
 theme:
   font:
     text: Merriweather Sans
-  logo: img/favicon.ico
   favicon: img/favicon.ico
   name: material
   custom_dir: overrides
   features:
     - navigation.tabs
-    - navigation.sections
-    - navigation.tracking
-    - navigation.expand
-    - navigation.path
-    - navigation.indexes
+    #- navigation.sections
+    #- navigation.tracking
+    #- navigation.expand
+    #- navigation.path
+    #- navigation.indexes
     - navigation.top
     - search.suggest
     - search.highlight
     - search.share
-    - toc.follow
+    #- toc.follow
+    #- content.code.copy
   palette:
     # Dark Mode
     - scheme: slate

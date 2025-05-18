@@ -1,0 +1,15 @@
+nav:
+  - Home: index.md
+  - Menu Reimagined: 
+    - Menu Reimagined: MenuReimagined/index.md
+    - Characters Menu: MenuReimagined/Characters Menu.md
+  - Yggdrasil: Yggdrasil
+  - More Resources: util
+  #  - "*"
+  - Extras:
+    - Blog: blog/index.md
+    - Posts: blog/posts
+    
+not_in_nav:
+flatten_single_child_sections: true
+# append_unmatched: true
