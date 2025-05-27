@@ -2,7 +2,7 @@
 
 Welcome to this solo project that aims to reimplement the menu in a certain degree, allowing customizations such as:
 
-**ANIMATED** Portraits, with option for custom Idle animation/s and sfx, character custom requeriments to play as them (tokens, etc, still not implemented completely), Menu Code, custom callbacks and MORE.
+**ANIMATED** Portraits, with option for custom Idle animation/s and sfx, character custom requirements to play as them (tokens, etc, still not implemented completely), Menu Code, custom callbacks and MORE.
 
 
 
@@ -25,26 +25,27 @@ From the vanilla Character max Id + 1, we repeat untill the Id is nil, therefore
 After this, we run the custom callback "MenuReimagined_GetCharacterMenu", that lets us insert a table into the NewMenu table and overwrite some values
 
 Example :
-```
-function base:Test()
-    local characterMenuTable = {}
-    characterMenuTable.Normal = {
-        ["TEST"] = {
-            ["#TAGS"] = { "IGNORE" },
-            Name = "test",
-            CharacterSprite = CharacterMenu:GetCharacterPortraitSprite(),
-            SheetSprite = "gfx/ui/main menu/charactermenu.anm2", true),
-            IsUnlocked = function(self)
-                return 1
-            end,
-            MenuType = "Normal"
+
+```lua
+    function base:Test()
+        local characterMenuTable = {}
+        characterMenuTable.Normal = {
+            ["TEST"] = {
+                ["#TAGS"] = { "IGNORE" },
+                Name = "test",
+                CharacterSprite = CharacterMenu:GetCharacterPortraitSprite(),
+                SheetSprite = "gfx/ui/main menu/charactermenu.anm2", true),
+                IsUnlocked = function(self)
+                    return 1
+                end,
+                MenuType = "Normal"
+            }
+
         }
+        return characterMenuTable
+    end
 
-    }
-    return characterMenuTable
-end
-
-YourMod:AddCallback("MenuReimagined_GetCharacterMenu", base.Test)
+    YourMod:AddCallback("MenuReimagined_GetCharacterMenu", base.Test)
 ```
 This one makes the TEST character in the Normal menu to be IGNORED (in #TAGS) from the menu. The IsUnlocked allows us to make a function that return 1 if its unlocked, -1if is hidden and 0 if its locked, and MenuType says in what menu it belongs, needed to check the sheet bg for rendering if not given one
 
@@ -76,7 +77,7 @@ In the same callback, you can also return a non existent CharacterMenuType, such
 ALso, we add the "BGSpriteSheet" with the string of the png with the menu variant sheet
 
 Example for Epyphany:
-```
+```lua
 function base:Epiphany()
     if not Epiphany then return end
 
@@ -116,19 +117,19 @@ If you need to run something only when the character is selected, for any reason
 The modded callback "MenuReimagined_MenuCode" runs every time it renders and the character is selected, with the arguments of characterId.
 
 Example:
-```
-function base:TestMenuCode(id)
-    if id == PlayerType.PLAYER_CAIN then
-        local tokens = Isaac.GetPersistentGameData():GetEventCounter(EventCounter.EDEN_TOKENS) .. " Tokens"
-        local mouse = Isaac.WorldToScreen(Input.GetMousePosition(true))
-        local a = Isaac.WorldToMenuPosition(MainMenuType.CHARACTER, Vector.Zero)
-        --Font previously loaded
-        YourMod.Font.Meat16:DrawString(tokens, mouse.X, mouse.Y,
-            KColor(0.212, 0.184, 0.176, 1))
+```lua
+    function base:TestMenuCode(id)
+        if id == PlayerType.PLAYER_CAIN then
+            local tokens = Isaac.GetPersistentGameData():GetEventCounter(EventCounter.EDEN_TOKENS) .. " Tokens"
+            local mouse = Isaac.WorldToScreen(Input.GetMousePosition(true))
+            local a = Isaac.WorldToMenuPosition(MainMenuType.CHARACTER, Vector.Zero)
+            --Font previously loaded
+            YourMod.Font.Meat16:DrawString(tokens, mouse.X, mouse.Y,
+                KColor(0.212, 0.184, 0.176, 1))
+        end
     end
-end
 
-YourMod:AddCallback("MenuReimagined_MenuCode", base.TestMenuCode)
+    YourMod:AddCallback("MenuReimagined_MenuCode", base.TestMenuCode)
 ```
 
 This example renders the eden tokens when the character Cain is selected at the mouse position
@@ -206,21 +207,21 @@ This will make NewGetActiveMenu return the custom menu we just set.
 The custom callback "MenuReimagined_OnModdedMenuUpdate" runs ONCE when we change MainMenuTypes, both between vanilla and Modded types, it allows us to set the input mask to whichever we want ONCE
 
 Example:
-```
-function base:OnModdedMenuUpdate(curMenu, prevMenu)
-    if prevMenu == MainMenuType.CHARACTER and type(curMenu) == "number" then
-        print("Bit vanilla")
-        MenuManager.SetInputMask(4294967295)
-    elseif curMenu == MainMenuType.CHARACTER then
-        print("Bit Character")
-        MenuManager.SetInputMask(base.Bitwise.CharacterMenu)
-    elseif curMenu == "SeedsMenu" then
-        print("Bit Seeds")
-        MenuManager.SetInputMask(base.Bitwise.SeedMenu)
+```lua
+    function base:OnModdedMenuUpdate(curMenu, prevMenu)
+        if prevMenu == MainMenuType.CHARACTER and type(curMenu) == "number" then
+            print("Bit vanilla")
+            MenuManager.SetInputMask(4294967295)
+        elseif curMenu == MainMenuType.CHARACTER then
+            print("Bit Character")
+            MenuManager.SetInputMask(base.Bitwise.CharacterMenu)
+        elseif curMenu == "SeedsMenu" then
+            print("Bit Seeds")
+            MenuManager.SetInputMask(base.Bitwise.SeedMenu)
+        end
     end
-end
-
-YourMod:AddCallback("MenuReimagined_OnModdedMenuUpdate", base.OnModdedMenuUpdate)
+    
+    YourMod:AddCallback("MenuReimagined_OnModdedMenuUpdate", base.OnModdedMenuUpdate)
 ```
 
 This function will change the inputmask when changin menus, and is the default in this API

@@ -43,6 +43,6 @@ Each of them are named as their menu varian type, the default ones are:
 
 # Custom MenuTypes
 To do documentation.  
-It's  functional already.
+It's functional already.
 
 

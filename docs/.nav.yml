@@ -6,7 +6,9 @@ nav:
   #  - "*"
   - Extras:
     - Blog: Blog/index.md
-    - Posts: Blog/posts
+    - Contact Me: Blog/Contact Me.md
+    - Posts:
+      - Blog/posts/*
     
 not_in_nav:
 flatten_single_child_sections: true

@@ -1,6 +1,6 @@
 # Welcome to Rickypedia
 
-<h2>Full documentation for any modding resource I made and games/proyects.</h2>
+<h2>Full documentation for any modding resource I made and games/projects.</h2>
 &nbsp;  
 ## Content
  - ### [Menu Reimagined](MenuReimagined)  
@@ -11,4 +11,4 @@
 - ### [Helper/Utility](Util)
     Helper file of my mods, here I'll explain what they do and how i implement them.
 - ### [Extras](Extras)  
-    Any extra resources I use for my poryects will be listed here
+    Any extra resources I use for my projects will be listed here

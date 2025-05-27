@@ -4,10 +4,13 @@
         "https://json.schemastore.org/mkdocs-1.6.json": "file:///c%3A/Users/Rdnat/Documents/GitHub/Rickypedia/mkdocs.yml"
     },
     "cSpell.ignoreWords": [
+        "Rickypedia",
         "awesome-nav",
         "favicon",
         "ico",
         "img",
+        "menutypes",
+        "subtable",
         "teammeatfont16bold"
     ],
     "cSpell.words": [
@@ -15,6 +18,10 @@
         "favicon",
         "ico",
         "img",
+        "Modloader",
         "Reimagined"
+    ],
+    "cSpell.enableFiletypes": [
+        "yaml"
     ]
 }

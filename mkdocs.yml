@@ -19,6 +19,8 @@ markdown_extensions:
   - pymdownx.superfences
 plugins:
    - search
+   - tags:
+      tags_file: tags.md
    - awesome-nav
 site_name: Rickypedia
 site_url: https://rdnator555.github.io/Rickypedia
